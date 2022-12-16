@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>ChatGPT Demo</title>
+</head>
+<body>
+  <h1>ChatGPT Demo</h1>
+  <div id="chat-container"></div>
+  <input type="text" id="user-input" placeholder="Enter your message here">
+  <button id="send-button">Send</button>
+  
+  <!-- ChatGPT JavaScript library -->
+  <script src="https://cdn.openai.com/chatgpt/v1/chatgpt.js"></script>
+  <script>
+    // Replace YOUR_API_KEY with your actual API key
+    const chatgpt = new ChatGPT("sk-...9M03");
+    
+    // DOM elements
+    const chatContainer = document.getElementById("chat-container");
+    const userInput = document.getElementById("user-input");
+    const sendButton = document.getElementById("send-button");
+    
+    // Handle user input
+    sendButton.addEventListener("click", async () => {
+      // Get user message
+      const message = userInput.value;
+      
+      // Clear input field
+      userInput.value = "";
+      
+      // Send message to ChatGPT and get response
+      const response = await chatgpt.send(message);
+      
+      // Display response in chat container
+      chatContainer.innerHTML += `<p>You: ${message}</p>`;
+      chatContainer.innerHTML += `<p>ChatGPT: ${response.text}</p>`;
+    });
+  </script>
+</body>
+</html>
