@@ -2,7 +2,8 @@
 <html>
  <head> 
   <meta charset="utf-8" /> 
-  <title>不要艾特我</title> 
+  <title>不要艾特我</title>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <style>
  h1 {
       margin-left: 80px;
@@ -61,7 +62,10 @@ body {
    <li onclick="copyText('99701')">邮编</li></br>  
    <li onclick="copyText('9073281100')">电话号码</li> 
   </ul> 
-<div class="footer">//点击自动复制//</div>
+<div class="footer"><span id="busuanzi_container_page_pv">
+  累计服务用户 <span id="busuanzi_value_page_pv"></span> 人
+</span>
+</div>
   <script>
     function copyText(text) {
       navigator.clipboard.writeText(text);
