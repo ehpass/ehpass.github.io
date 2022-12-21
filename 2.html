@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>不要艾特我</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    h1 {
+      margin-left: 80px;
+      margin-top: 100px;
+    }
+    ul {
+      margin-left: 80px;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>美国免税州</h1>
+  <ul>
+    <li onclick="copyText('mm')">名字-姓氏</li>
+    <li onclick="copyText('Merhar Avenue')">街道地址</li>
+    <li onclick="copyText('40')">楼号、单元号、房间号</li>
+    <li onclick="copyText('Fairbanks')">城市</li>
+    <li onclick=>省/市</li>
+    <li onclick="copyText('99701')">邮编</li>
+    <li onclick="copyText('9073281100')">电话号码</li>
+  </ul>
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text);
+      alert('复制成功！快去粘贴吧: ' + text);
+    }
+  </script>
+</body>
+</html>
