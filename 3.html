@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	/* Define a dark color scheme */
+:root {
+  --dark-bg-color: #333333;
+  --dark-text-color: #ffffff;
+}
+
+/* Define a light color scheme */
+:root {
+  --light-bg-color: #ffffff;
+  --light-text-color: #333333;
+}
+
+/* Set the default color scheme to light */
+body {
+  background-color: var(--light-bg-color);
+  color: var(--light-text-color);
+}
+
+/* Use a media query to apply the dark color scheme when the dark mode preference is detected */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+  }
+}
+</style>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h1>我的第一个标题</h1>
+<p>我的第一个段落。</p>
+
+</body>
+	<script>
+	  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+darkModeMediaQuery.addEventListener('change', (event) => {
+  if (event.matches) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+});
+
+  </script>
+</html>
