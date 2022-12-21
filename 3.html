@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+<!-- 在网页中添加一个复选框 -->
+<input type="checkbox" id="dark-mode-checkbox">
+<label for="dark-mode-checkbox">开启夜间模式</label>
+
+<h1>我的第一个标题</h1>
+<p>我的第一个段落。</p>
+	<script>
+// 获取复选框
+var darkModeCheckbox = document.getElementById('dark-mode-checkbox');
+
+// 监听复选框的点击事件
+darkModeCheckbox.addEventListener('click', function() {
+  // 如果用户选中了复选框，则设置 dark-mode 为 true
+  if (darkModeCheckbox.checked) {
+    localStorage.setItem('dark-mode', 'true');
+  } else {
+    // 否则设置 dark-mode 为 false
+    localStorage.setItem('dark-mode', 'false');
+  }
+});
+</script>
+</body>
+</html>
