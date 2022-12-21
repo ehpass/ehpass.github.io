@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Text Copy</title>
+</head>
+<body>
+  <h1>Text List</h1>
+  <ul>
+    <li onclick="copyText('Text 1')">Text 1</li>
+    <li onclick="copyText('Text 2')">Text 2</li>
+    <li onclick="copyText('Text 3')">Text 3</li>
+	<li onclick="copyText('Text 4')">Text 4</li>
+    <li onclick="copyText('Text 5')">Text 5</li>
+    <li onclick="copyText('Text 6')">Text 6</li>
+  </ul>
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text);
+      alert('Copied to clipboard: ' + text);
+    }
+  </script>
+</body>
+</html>
