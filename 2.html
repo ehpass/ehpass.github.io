@@ -53,19 +53,19 @@ body {
  <body> 
   <h1>美国免税州</h1> 
   <ul> 
-   <li onclick="copyText('mm')">名字-姓氏</li></br>  
+   <li onclick="copyText('mm')">名字&姓氏</li></br>  
    <li onclick="copyText('Merhar Avenue')">街道地址</li></br>  
    <li onclick="copyText('40')">楼号、单元号、房间号</li></br>  
    <li onclick="copyText('Fairbanks')">城市</li></br>  
-   <li onclick="">省/市</li></br>  
+   <li onclick="">省/市：阿拉斯加州（选择）</li></br>  
    <li onclick="copyText('99701')">邮编</li></br>  
    <li onclick="copyText('9073281100')">电话号码</li> 
   </ul> 
-<div class="footer">公众号：不要艾特我</div>
+<div class="footer">使用方法：点击对应内容粘贴即可</div>
   <script>
     function copyText(text) {
       navigator.clipboard.writeText(text);
-      alert('复制成功！快去粘贴吧: ' + text);
+      alert('复制成功！);
     }
   </script>  
   <script>
