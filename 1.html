@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Responsive Text Copy</title>
+  <title>不要艾特我</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <h1>Text List</h1>
+  <h1>美国免税州</h1>
   <ul>
-    <li onclick="copyText('Text 1')">Text 1</li>
-    <li onclick="copyText('Text 2')">Text 2</li>
-    <li onclick="copyText('Text 3')">Text 3</li>
-	<li onclick="copyText('Text 4')">Text 4</li>
-    <li onclick="copyText('Text 5')">Text 5</li>
-    <li onclick="copyText('Text 6')">Text 6</li>
+    <li onclick="copyText('mm')">名字-姓氏</li>
+    <li onclick="copyText('Merhar Avenue')">街道地址</li>
+    <li onclick="copyText('40')">楼号、单元号、房间号</li>
+    <li onclick="copyText('Fairbanks')">城市</li>
+    <li onclick=>省/市</li>
+    <li onclick="copyText('99701')">邮编</li>
+    <li onclick="copyText('9073281100')">电话号码</li>
   </ul>
   <script>
     function copyText(text) {
       navigator.clipboard.writeText(text);
-      alert('Copied to clipboard: ' + text);
+      alert('复制成功！快去粘贴吧: ' + text);
     }
   </script>
 </body>
