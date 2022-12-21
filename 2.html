@@ -1,41 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>不要艾特我</title>
-	<meta name="color-scheme" content="light dark">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>不要艾特我</title> 
   <style>
-    h1 {
-      margin-left: 80px;
+ h1 {
+      margin-left: 50px;
       margin-top: 100px;
     }
     ul {
-      margin-left: 80px;
-      margin-top: 100px;
+      margin-left: 50px;
+      margin-top: 10px;
     }
-	  .dark-mode {
-  background-color: #333333;
-  color: #ffffff;
+	/* Define a dark color scheme */
+:root {
+  --dark-bg-color: #333333;
+  --dark-text-color: #ffffff;
 }
 
-  </style>
-</head>
-<body>
-  <h1>美国免税州</h1>
-  <ul>
-    <li onclick="copyText('mm')">名字-姓氏</li>
-    <li onclick="copyText('Merhar Avenue')">街道地址</li>
-    <li onclick="copyText('40')">楼号、单元号、房间号</li>
-    <li onclick="copyText('Fairbanks')">城市</li>
-    <li onclick=>省/市</li>
-    <li onclick="copyText('99701')">邮编</li>
-    <li onclick="copyText('9073281100')">电话号码</li>
-  </ul>
+/* Define a light color scheme */
+:root {
+  --light-bg-color: #ffffff;
+  --light-text-color: #333333;
+}
+
+/* Set the default color scheme to light */
+body {
+  background-color: var(--light-bg-color);
+  color: var(--light-text-color);
+}
+
+/* Use a media query to apply the dark color scheme when the dark mode preference is detected */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+  }
+}
+</style> 
+ </head> 
+ <body> 
+  <h1>美国免税州</h1> 
+  <ul> 
+   <li onclick="copyText('mm')">名字-姓氏</li> 
+   <li onclick="copyText('Merhar Avenue')">街道地址</li> 
+   <li onclick="copyText('40')">楼号、单元号、房间号</li> 
+   <li onclick="copyText('Fairbanks')">城市</li> 
+   <li onclick="">省/市</li> 
+   <li onclick="copyText('99701')">邮编</li> 
+   <li onclick="copyText('9073281100')">电话号码</li> 
+  </ul> 
   <script>
     function copyText(text) {
       navigator.clipboard.writeText(text);
       alert('复制成功！快去粘贴吧: ' + text);
     }
+  </script>  
+  <script>
 	  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 darkModeMediaQuery.addEventListener('change', (event) => {
   if (event.matches) {
@@ -45,6 +66,6 @@ darkModeMediaQuery.addEventListener('change', (event) => {
   }
 });
 
-  </script>
-</body>
+  </script> 
+ </body>
 </html>
