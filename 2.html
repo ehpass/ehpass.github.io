@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>不要艾特我</title>
+	<meta name="color-scheme" content="light dark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     h1 {
@@ -12,6 +13,11 @@
       margin-left: 80px;
       margin-top: 100px;
     }
+	  .dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
   </style>
 </head>
 <body>
@@ -30,6 +36,15 @@
       navigator.clipboard.writeText(text);
       alert('复制成功！快去粘贴吧: ' + text);
     }
+	  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+darkModeMediaQuery.addEventListener('change', (event) => {
+  if (event.matches) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+});
+
   </script>
 </body>
 </html>
