@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>不要艾特我</title>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <style>
+ h1 {
+      margin-left: 80px;
+      margin-top: 310px;
+      font-size:80px;
+    }
+    ul {
+      margin-left: 80px;
+      margin-top: 10px;
+      font-size:40px;
+    }
+	/* Define a dark color scheme */
+:root {
+  --dark-bg-color: #333333;
+  --dark-text-color: #ffffff;
+}
+
+/* Define a light color scheme */
+:root {
+  --light-bg-color: #ffffff;
+  --light-text-color: #333333;
+}
+
+/* Set the default color scheme to light */
+body {
+  background-color: var(--light-bg-color);
+  color: var(--light-text-color);
+}
+
+/* Use a media query to apply the dark color scheme when the dark mode preference is detected */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+  }
+}
+	  
+.footer {
+        position: fixed;
+        bottom:;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 40px;
+	margin-top: 250px;
+      }
+</style> 
+ </head> 
+ <body> 
+  <h1>日本地址（点击自动复制）</h1> 
+  <ul> 
+   <li onclick="copyText('rr')">姓氏</li></br>
+   <li onclick="copyText('rr')">名字</li></br>
+   <li onclick="copyText('8100001')">邮编</li></br>  
+   <li onclick="">省/市：福冈（选择）</li></br>  
+   <li onclick="copyText('中央区天神')">街道地址</li></br>  
+   <li onclick="copyText('25')">楼号、单元号、房间号</li></br>  
+   <li onclick="copyText('092')">区号</li></br>  
+   <li onclick="copyText('7780200')">电话号码</li> 
+  </ul> 
+<div class="footer"><span id="busuanzi_container_page_pv">
+  累计服务用户 <span id="busuanzi_value_page_pv"></span> 人
+</span>
+</div>
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text);
+      alert('复制成功！请粘贴到对应位置');
+    }
+  </script>  
+  <script>
+	  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+darkModeMediaQuery.addEventListener('change', (event) => {
+  if (event.matches) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+});
+
+  </script> 
+ </body>
+</html>
