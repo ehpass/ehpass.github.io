@@ -52,9 +52,10 @@ body {
 </style> 
  </head> 
  <body> 
-  <h1>美国免税州</h1> 
+  <h1>美国地址（点击复制）</h1> 
   <ul> 
-   <li onclick="copyText('mm')">名字&姓氏</li></br>  
+   <li onclick="copyText('mm')">名字</li></br>
+   <li onclick="copyText('mm')">姓氏</li></br>
    <li onclick="copyText('Merhar Avenue')">街道地址</li></br>  
    <li onclick="copyText('40')">楼号、单元号、房间号</li></br>  
    <li onclick="copyText('Fairbanks')">城市</li></br>  
@@ -69,7 +70,7 @@ body {
   <script>
     function copyText(text) {
       navigator.clipboard.writeText(text);
-      alert('复制成功');
+      alert('复制成功！请粘贴到对应位置');
     }
   </script>  
   <script>
