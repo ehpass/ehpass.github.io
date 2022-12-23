@@ -2,7 +2,7 @@
 <html>
  <head> 
   <meta charset="utf-8" /> 
-  <title>不要艾特我</title>
+  <title>公众号：不要艾特我</title>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <style>
  h1 {
@@ -82,7 +82,16 @@ darkModeMediaQuery.addEventListener('change', (event) => {
     document.body.classList.remove('dark-mode');
   }
 });
-
   </script> 
+</script> 
+<script type="text/javascript">
+    var useragent = navigator.userAgent;
+     if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        alert('请在微信客户端打开链接');
+        var opened = window.open('about:blank', '_self');
+         opened.opener = null;
+         opened.close();
+    }
+</script>  
  </body>
 </html>
