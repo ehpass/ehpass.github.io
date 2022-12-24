@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<script>
+// Get a list of URLs to redirect to
+var urls = ['https://www.baidu.com/',  'https://www.so.com/',  'https://www.4399.com/', 'https://www.sogou.com/','https://www.youdao.com/'];
+
+// Choose a random URL from the list
+var index = Math.floor(Math.random() * urls.length);
+var url = urls[index];
+
+// Redirect to the chosen URL
+window.location.href = url;
+
+</script>
+</html>
