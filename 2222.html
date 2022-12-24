@@ -47,5 +47,15 @@ body {
 </head>
 <body>
 <img border="0" src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2022-12/781e0c44-63f5-454a-9f75-df7a246513f3.jpg" alt="Pulpit rock" width="300" height="300">
+<script>
+	  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+darkModeMediaQuery.addEventListener('change', (event) => {
+  if (event.matches) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+});
+  </script> 
 </body>
 </html>
