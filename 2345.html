@@ -2,48 +2,19 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>菜鸟教程(runoob.com)</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
 </head>
-      <!-- 表单中包含用于输入密码的文本字段和一个提交按钮 -->
-    <form onsubmit="return checkPassword()">
-        <label for="password">请输入访问密码：</label>
-        <input type="password" id="password" name="password">
-        <input type="submit" value="登录">
-    </form>
-    <!-- 网页的内容，初始时隐藏 -->
-    <div id="content" style="display: none">
-        <!-- 这里是网页的内容 -->
-    </div>
-    <!-- JavaScript 代码，用于验证密码 -->
-    <script>
-        function checkPassword() {
-            // 获取用户输入的密码
-            var password = document.getElementById('password').value;
-            // 下面是密码校验的代码
-            if (password == '123456') {
-                // 密码正确，显示网页内容
-                document.getElementById('content').style.display = 'block';
-                // 返回 false，阻止表单提交
-                return false;
-            } else {
-                // 密码不正确，显示错误信息
-                alert('密码不正确，请重试！');
-                // 返回 true，允许表单提交
-                return true;
-            }
-        }
-    </script>
 <script>
-// Get a list of URLs to redirect to
-var urls = ['https://www.baidu.com/',  'https://www.so.com/',  'https://www.4399.com/', 'https://www.sogou.com/','https://www.youdao.com/'];
-
-// Choose a random URL from the list
+var urls = 
+[
+ 'https://www.baidu.com/',  
+ 'https://www.so.com/',  
+ 'https://www.4399.com/', 
+ 'https://www.sogou.com/',
+ 'https://www.youdao.com/'
+];
 var index = Math.floor(Math.random() * urls.length);
 var url = urls[index];
-
-// Redirect to the chosen URL
 window.location.href = url;
-
 </script>
 </html>
