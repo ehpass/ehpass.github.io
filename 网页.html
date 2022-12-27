@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Responsive Website</title><style>
+	  /* Menu bar style */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  font-family: sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Banner style */
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+</style>
+  </head>
+  <body>
+    <!-- Menu bar -->
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Scrolling text -->
+    <marquee>Welcome to my responsive website!</marquee>
+
+    <!-- Banner -->
+    <img src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2022-12/6b96b296-41e7-4864-b807-430a5524f092.png" alt="Banner">
+<ul>
+  <li><a href="/articles/article1.html">Article 1</a></li>
+  <li><a href="/articles/article2.html">Article 2</a></li>
+  <li><a href="/articles/article3.html">Article 3</a></li>
+</ul>
+
+    <!-- Copyright information -->
+    <footer>
+      <p>Copyright 2022 by John Doe</p>
+    </footer>
+  </body><script>
+	// Get all the links in the menu bar
+var links = document.querySelectorAll("nav a");
+
+// Add a click event listener to each link
+links.forEach(function(link) {
+  link.addEventListener("click", function(event) {
+    // Prevent the default link behavior (i.e., navigate to the link's URL)
+    event.preventDefault();
+    // Instead, do something else (e.g., display a message)
+    alert("You clicked on the link!");
+  });
+});
+</script>
+</html>
