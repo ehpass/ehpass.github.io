@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Responsive Website</title>
+  <style>
+	  body {
+  font-family: sans-serif;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+  header nav.responsive {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    width: 100%;
+  }
+  header nav.responsive a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  header nav.responsive a:hover {
+    background-color: #111;
+  }
+}
+ </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Welcome to My Website</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod sollicitudin arcu, a luctus nisl consectetur a. Fusce euismod dui eu metus lobortis, at vestibulum tortor congue.</p>
+  </main>
+  <footer>
+    <p>Copyright 2021 My Website</p>
+  </footer>
+</body>
+</html>
