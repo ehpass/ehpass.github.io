@@ -159,5 +159,12 @@
     <div class="spinner-blade"></div>
     <div class="spinner-blade"></div>
 </div>
+
+<?php
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+if (strpos($user_agent, 'Android') !== false) {
+    exit;
+}
+    ?>
 </body>
 </html>
