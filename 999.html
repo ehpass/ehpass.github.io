@@ -26,52 +26,12 @@ marquee {
 a {
   text-decoration: none;
 }
-    
-.shake {
-  animation: shake 0.5s linear infinite;
-}
-
-@keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(0px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(2px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(2px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
   </style>
 </head>
 <body>
 <marquee>处于订阅状态，才能修改方案；安卓用户请使用 iTunes 辅助认证；方案有效期1年，每月享半价优惠。</marquee>
 <div class="center">
-  <a href="http://example.com" class="shake" onclick="return confirm('确定要将您目前的订阅方案修改为大学生吗?');">验证您的学生身份</a>
+  <a href="http://example.com" onclick="return confirm('确定要将您目前的订阅方案修改为大学生吗?');">验证您的学生身份</a>
 </div>
 <footer>&copy; 不要艾特我</footer>
 </body>
