@@ -7,18 +7,18 @@
 <body>
 <marquee>处于订阅状态，才能修改方案；安卓用户请使用 iTunes 辅助认证；方案有效期1年，每月享半价优惠。</marquee>
 <div class="center">
-  <a href="http://example.com" onclick="return confirm('确定要将您目前的订阅方案修改为大学生吗?');">验证您的学生身份</a>
+<a href="/dxs.html" onclick="return confirm('确定要将您目前的订阅方案修改为大学生吗?');">验证您的学生身份</a>
 </div>
 <footer>&copy; 不要艾特我</footer>
 </body>
 <script>
-	  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 darkModeMediaQuery.addEventListener('change', (event) => {
-  if (event.matches) {
-    document.body.classList.add('dark-mode');
-  } else {
-    document.body.classList.remove('dark-mode');
-  }
+if (event.matches) {
+document.body.classList.add('dark-mode');
+} else {
+document.body.classList.remove('dark-mode');
+}
 });
-  </script> 
+</script> 
 </html>
