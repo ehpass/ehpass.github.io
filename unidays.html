@@ -2,6 +2,21 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
+<style>
+  a {
+    color: var(--link-color);
+}
+
+/* 黑暗模式时，使用白色作为链接颜色 */
+.dark-mode {
+    --link-color: white;
+}
+
+/* 明亮模式时，使用蓝色作为链接颜色 */
+:not(.dark-mode) {
+    --link-color: blue;
+}
+</style>
 <head>
 </head>
 <body>
