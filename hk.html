@@ -5,6 +5,29 @@
 <title>账单寄送地址</title>
 <head>
   <style>
+    
+:root {
+  --dark-bg-color: #333333;
+  --dark-text-color: #ffffff;
+}
+
+:root {
+  --light-bg-color: #ffffff;
+  --light-text-color: #333333;
+}
+
+body {
+  background-color: var(--light-bg-color);
+  color: var(--light-text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+  }
+}
+
 .center {
     position: absolute;
     top: 50%;
