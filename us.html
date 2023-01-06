@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>账单寄送地址</title>
-<head>
+ <head>
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>账单寄送地址</title>  
   <style>
 .center {
     position: absolute;
@@ -23,32 +23,43 @@ footer {
 marquee {
   margin-top: 50px;
 }
-  </style>
-</head>
-<body>
-<marquee>点击自动复制 / 购买注册服务添加微信：ehpass</marquee>
-<div class="center">
-  <h1>美国地址</h1>
-  <ul>
-    <li onclick="copyText('mm')">名字</li></br>
-    <li onclick="copyText('mm')">姓氏</li></br>
-    <li onclick="copyText('Merhar Avenue')">街道地址</li></br>
-    <li onclick="copyText('23')">房间号</li></br>
-    <li onclick="copyText('Fairbanks')">城市</li></br>
-    <li onclick="copyText('阿拉斯加州')">省/市：阿拉斯加州（选择）</li></br>
-    <li onclick="copyText('99701')">邮编</li></br>
-    <li onclick="copyText('6822681996')">电话号码</li></br>
-    <li onclick="copyText('ehpass')">添加微信</li>
-  </ul>
-</div>
-<footer>&copy; 不要艾特我</footer>
-</body>
-<script>
+  </style> 
+ </head> 
+ <body> 
+  <marquee>
+   点击自动复制 / 购买注册服务添加微信：ehpass
+  </marquee> 
+  <div class="center"> 
+   <h1>美国地址</h1> 
+   <ul> 
+    <li onclick="copyText('mm')">名字</li>
+    <br /> 
+    <li onclick="copyText('mm')">姓氏</li>
+    <br /> 
+    <li onclick="copyText('Merhar Avenue')">街道地址</li>
+    <br /> 
+    <li onclick="copyText('23')">房间号</li>
+    <br /> 
+    <li onclick="copyText('Fairbanks')">城市</li>
+    <br /> 
+    <li onclick="copyText('阿拉斯加州')">省/市：阿拉斯加州（选择）</li>
+    <br /> 
+    <li onclick="copyText('99701')">邮编</li>
+    <br /> 
+    <li onclick="copyText('6822681996')">电话号码</li>
+    <br /> 
+    <li onclick="copyText('ehpass')">添加微信</li> 
+   </ul> 
+  </div> 
+  <footer>
+   &copy; 不要艾特我
+  </footer>  
+  <script>
     function copyText(text) {
       navigator.clipboard.writeText(text);  
     }
-  </script>
-<script type="text/javascript">
+  </script> 
+  <script type="text/javascript">
     var useragent = navigator.userAgent;
      if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
         alert('请在微信客户端打开链接');
@@ -56,5 +67,6 @@ marquee {
          opened.opener = null;
          opened.close();
     }
-</script>  
+</script> 
+ </body>
 </html>
