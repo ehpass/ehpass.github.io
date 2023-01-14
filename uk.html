@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>账单寄送地址</title>  
+  <style>
+    
+:root {
+  --dark-bg-color: #333333;
+  --dark-text-color: #ffffff;
+}
+
+:root {
+  --light-bg-color: #ffffff;
+  --light-text-color: #333333;
+}
+
+body {
+  background-color: var(--light-bg-color);
+  color: var(--light-text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+  }
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+marquee {
+  margin-top: 50px;
+}
+  </style> 
+ </head> 
+ <body> 
+  <marquee>
+   点击自动复制地址信息 / 购买注册服务添加微信：ehpass
+  </marquee> 
+  <div class="center"> 
+   <h1>英国地址</h1> 
+   <ul> 
+    <li onclick="copyText('xx')">名字</li>
+    <br /> 
+    <li onclick="copyText('xx')">姓氏</li>
+    <br /> 
+    <li onclick="copyText('九龍塘達之路')">街道地址</li>
+    <br /> 
+    <li onclick="copyText('23')">房间号</li>
+    <br />
+    <li onclick="copyText('23')">城市</li>
+    <br />
+    <li onclick="copyText('39798800')">区</li>
+    <br />
+    <li onclick="copyText('23')">邮编</li>
+    <br />
+    <li onclick="copyText('23')">区号</li>
+    <br />
+    <li onclick="copyText('23')">电话号码</li>
+    <br />
+    <li onclick="copyText('ehpass')">添加微信</li> 
+   </ul> 
+  </div> 
+  <footer>
+   &copy; 不要艾特我
+  </footer>  
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text);  
+    }
+  </script> 
+  <script type="text/javascript">
+    var useragent = navigator.userAgent;
+     if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        alert('请在微信客户端打开链接');
+        var opened = window.open('about:blank', '_self');
+         opened.opener = null;
+         opened.close();
+    }
+</script> 
+  <script>
+	  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+darkModeMediaQuery.addEventListener('change', (event) => {
+  if (event.matches) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+});
+  </script> 
+ </body>
+</html>
