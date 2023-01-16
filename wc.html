@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+  <ul>
+    <div class="center"><li onclick="copyText('ehpass')">微信：ehpass</li></div>
+  </ul>
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text);
+      alert('已复制微信号：' + text);
+    }
+  </script>
+</body>
+</html>
