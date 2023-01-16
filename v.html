@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title></title>
+  <style>
+    .item {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .item .item-img-delete {
+        background-image: url(https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-1/0b408964-9ea8-4658-ad4f-21ee8db98261.png);
+        background-size: cover;
+        height: 90px;
+        width: 90px;
+        margin: 0 auto;
+    }
+    .item p {
+        font-size: 16px;
+        color: #50525c;
+        text-align: center;
+        margin-top: 20px;
+        line-height: 1;
+    }
+</style>
+</head>
+ <body id="j_page-mode">
+  <div class="box">
+   <div class="item">
+    <div class="item-img-delete"></div>
+    <p id="errno" style="display:none;">1</p>
+    <p id="contaniner" onclick="copyText('ehpass')">复制微信号</p>
+   </div>
+  </div> 
+ </body>
+<script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text);
+      alert('已复制微信号：' + text);
+    }
+  </script>
+</html>
