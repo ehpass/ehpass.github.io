@@ -1,0 +1,72 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="utf-8">
+<link rel="shortcut icon" href="/favicon.ico" />  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title>Hi6</title>  
+<style>  
+body {  
+    font-family: Arial;  
+    background-color: #f0f0f0;  
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {  
+    font-size: 80px;  
+    color: #333;  
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+}  
+
+span {
+    font-size: 64px;
+    margin: -20px 0 20px 0;
+    display: block;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.dot {
+    display: inline-block;
+    margin: 0 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #aaa;
+    animation: dot-animation 1s ease-in-out infinite;
+}
+
+@keyframes dot-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+</style>  
+</head>  
+<body> 
+    <h1><span>&#128540;
+    </span>Hi6<span class="dot"></span>in</h1>
+    <div class="footer">&copy; 2023 hi6.in. All rights reserved. </div>
+</body>  
+</html>
