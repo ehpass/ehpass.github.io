@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居中展示图片</title>
+    <style>
+      /* 定义全屏的容器 */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 定义容器中的内容 */
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      /* 定义图片样式 */
+      .center img {
+        max-width: 50%;
+        max-height: 50%;
+        display: block;
+        margin: auto;
+      }
+
+      /* 定义链接样式 */
+      .center a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <a href="weixin://">
+        <img src="https://pic1.zhimg.com/v2-4fece7395665bf11ce0c411fe0d2bbc5_hd.jpeg" alt="图片">
+      </a>
+    </div>
+  </body>
+</html>
