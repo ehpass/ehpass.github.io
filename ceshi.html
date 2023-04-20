@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>检测微信浏览器</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    // 获取UA信息
+    var UA = navigator.userAgent.toLowerCase();
+    // 判断是否在微信中打开
+    if (UA.match(/micromessenger/i) == 'micromessenger') {
+      // 显示遮罩层
+      var maskDiv = document.createElement("div");
+      maskDiv.style.backgroundColor = "#000000";
+      maskDiv.style.width = "100%";
+      maskDiv.style.height = "100%";
+      maskDiv.style.position = "fixed";
+      maskDiv.style.top = "0";
+      maskDiv.style.left = "0";
+      maskDiv.style.opacity = "0.7";
+      maskDiv.style.zIndex = "10000";
+      var tipDiv = document.createElement("div");
+      tipDiv.style.textAlign = "center";
+      tipDiv.style.width = "100%";
+      tipDiv.style.position = "fixed";
+      tipDiv.style.top = "40%";
+      tipDiv.style.color = "#ffffff";
+      tipDiv.style.zIndex = "10001";
+      tipDiv.innerHTML = "请在浏览器中打开此页面";
+      document.body.appendChild(maskDiv);
+      document.body.appendChild(tipDiv);
+      // 禁止遮罩层和提示框关闭
+      $(maskDiv).click(function(){
+        return false;
+      });
+      $(tipDiv).click(function(){
+        return false;
+      });
+    }
+  </script>
+</body>
+</html>
