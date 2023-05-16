@@ -1,107 +1,90 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8" /> 
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-  <title>账单寄送地址</title>  
-  <style>
-    
-:root {
-  --dark-bg-color: #333333;
-  --dark-text-color: #ffffff;
-}
-
-:root {
-  --light-bg-color: #ffffff;
-  --light-text-color: #333333;
-}
-
-body {
-  background-color: var(--light-bg-color);
-  color: var(--light-text-color);
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--dark-bg-color);
-    color: var(--dark-text-color);
-  }
-}
-
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
 .center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding-bottom: 50px;
-}
-
-marquee {
-  margin-top: 50px;
-}
-  </style> 
- </head> 
- <body> 
-  <marquee>
-   点击自动复制 / 购买注册服务添加微信：ehpass
-  </marquee> 
-  <div class="center"> 
-   <h1>日本地址</h1> 
-   <ul> 
-    <li onclick="copyText('rr')">姓氏</li>
-    <br /> 
-    <li onclick="copyText('rr')">名字</li>
-    <br /> 
-    <li onclick="copyText('8100001')">邮编</li>
-    <br /> 
-    <li onclick="copyText('福冈')">省/市：福冈</li>
-    <br /> 
-    <li onclick="copyText('福罔')">城市</li>
-    <br /> 
-    <li onclick="copyText('中央区天神')">街道地址</li>
-    <br /> 
-    <li onclick="copyText('23')">房间号</li>
-    <br /> 
-    <li onclick="copyText('092')">区号</li>
-    <br /> 
-    <li onclick="copyText('7780200')">电话号码</li>
-    <br /> 
-    <li onclick="copyText('ehpass')">添加微信</li> 
-   </ul> 
-  </div> 
-  <footer>
-   &copy; 不要艾特我
-  </footer>  
+</style>
+</head>
+<body>
+<div class="center">
+  <p>点击自动复制：</p>
+  <p id="1">① 姓氏 - 名字：rr - rr</p>
+  <p id="2">② 邮编：8100001</p>
+  <p id="3">③ 省/市：福冈</p>
+  <p id="4">④ 城市：福罔</p>
+  <p id="5">⑤ 街道地址：中央区天神</p>
+  <p id="6">⑥ 楼号、单元号：25</p>
+  <p id="7">⑦ 区号：092</p>
+  <p id="8">⑦电话号码：7780200</p>
+</div>
   <script>
+    // 1
+    var address = document.getElementById("1");
+    address.onclick = function() {
+      var text = "rr";
+      copyText(text);
+    }
+    
+    // 2
+    var phone = document.getElementById("2");
+    phone.onclick = function() {
+      var text = "8100001";
+      copyText(text);
+    }
+    
+    // 3
+    var email = document.getElementById("3");
+    email.onclick = function() {
+      var text = "这个选择，不是复制。";
+      copyText(text);
+    }
+    
+    // 4
+    var email = document.getElementById("4");
+    email.onclick = function() {
+      var text = "福罔";
+      copyText(text);
+    }
+    // 5
+    var email = document.getElementById("5");
+    email.onclick = function() {
+      var text = "中央区天神";
+      copyText(text);
+    }
+    // 6
+    var email = document.getElementById("6");
+    email.onclick = function() {
+      var text = "25";
+      copyText(text);
+    }
+    // 7
+    var email = document.getElementById("7");
+    email.onclick = function() {
+      var text = "092";
+      copyText(text);
+    }
+   // 8
+    var email = document.getElementById("8");
+    email.onclick = function() {
+      var text = "7780200";
+      copyText(text);
+    }
+
+    // 复制文本
     function copyText(text) {
-      navigator.clipboard.writeText(text);  
+      var tempInput = document.createElement("textarea");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      alert("已复制：" + text);
     }
-  </script> 
-  <script type="text/javascript">
-    var useragent = navigator.userAgent;
-     if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
-        alert('请在微信客户端打开链接');
-        var opened = window.open('about:blank', '_self');
-         opened.opener = null;
-         opened.close();
-    }
-</script> 
-  <script>
-	  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-darkModeMediaQuery.addEventListener('change', (event) => {
-  if (event.matches) {
-    document.body.classList.add('dark-mode');
-  } else {
-    document.body.classList.remove('dark-mode');
-  }
-});
-  </script> 
- </body>
+  </script>
+</body>
 </html>
