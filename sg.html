@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+</style>
+</head>
+<body>
+<div class="center">
+  <p>点击自动复制：</p>
+  <p id="1">① 名字 - 姓氏：xx - xx</p>
+  <p id="2">② 街道地址：Orchard Road</p>
+  <p id="3">③ 楼号、单元号：270</p>
+  <p id="4">④ 邮编：238857</p>
+  <p id="5">⑤ 电话号码：18006992824</p>
+</div>
+  <script>
+    // 1
+    var address = document.getElementById("1");
+    address.onclick = function() {
+      var text = "xx";
+      copyText(text);
+    }
+    
+    // 2
+    var phone = document.getElementById("2");
+    phone.onclick = function() {
+      var text = "Orchard Road";
+      copyText(text);
+    }
+    
+    // 3
+    var email = document.getElementById("3");
+    email.onclick = function() {
+      var text = "270";
+      copyText(text);
+    }
+    
+    // 4
+    var email = document.getElementById("4");
+    email.onclick = function() {
+      var text = "238857";
+      copyText(text);
+    }
+
+    // 5
+    var email = document.getElementById("5");
+    email.onclick = function() {
+      var text = "18006992824";
+      copyText(text);
+    }
+
+    // 复制文本
+    function copyText(text) {
+      var tempInput = document.createElement("textarea");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      alert("✓已复制：" + text);
+    }
+  </script>
+</body>
+</html>
